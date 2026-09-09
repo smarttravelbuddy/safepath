@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html
+  lang="ru"
+  data-title-ru="Политика конфиденциальности — Safe Path"
+  data-title-be="Палітыка канфідэнцыйнасці — Safe Path"
+  data-title-en="Privacy Policy — Safe Path"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#526b5c" />
+    <title>Политика конфиденциальности — Safe Path</title>
+    <link rel="icon" type="image/png" href="assets/app-icon.png" />
+    <link rel="apple-touch-icon" href="assets/app-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="lang.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap legal-page">
+      <header class="site-header">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/app-icon.png" width="32" height="32" alt="" />
+            <span>Safe Path</span></a
+          >
+        </div>
+        <div class="header-tools">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-sp-lang-btn="ru" aria-pressed="true">RU</button>
+            <button type="button" data-sp-lang-btn="be" aria-pressed="false">BY</button>
+            <button type="button" data-sp-lang-btn="en" aria-pressed="false">EN</button>
+          </div>
+          <nav
+            class="nav-inline"
+            data-aria-ru="Навигация по сайту"
+            data-aria-be="Навігацыя па сайце"
+            data-aria-en="Site navigation"
+            aria-label="Навигация по сайту"
+          >
+            <a href="index.html"
+              ><span class="lang-ru">Главная</span><span class="lang-be" hidden>Галоўная</span
+              ><span class="lang-en" hidden>Home</span></a
+            >
+            <a href="terms.html"
+              ><span class="lang-ru">Условия использования</span
+              ><span class="lang-be" hidden>Умовы выкарыстання</span
+              ><span class="lang-en" hidden>Terms of Use</span></a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="lang-ru">
+          <h1>Политика конфиденциальности</h1>
+          <p class="meta">
+            Последнее обновление: 10 сентября 2026 г.<br />
+            Оператор: <strong>Safe Path</strong><br />
+            Контакт по вопросам данных:
+            <strong><a href="mailto:safepath.support@proton.me">safepath.support@proton.me</a></strong>
+          </p>
+
+          <p>
+            Эта политика описывает, как мобильное приложение Safe Path: Family Tracker («Приложение»)
+            может обрабатывать информацию на вашем устройстве и при обращении к сети. Список семьи,
+            зоны и аватар остаются на устройстве. Координаты при режиме «На связи», статус SOS и
+            служебные токены передаются в Firebase. Фактический состав функций зависит от версии
+            сборки и разрешений, которые вы выдали в iOS.
+          </p>
+
+          <h2>1. Кто отвечает за обработку</h2>
+          <p>
+            Оператор персональных данных (или лицо, ответственное за приложение в вашей
+            юрисдикции): <strong>Safe Path</strong>. Для запросов по GDPR и локальным аналогам
+            используйте контакт выше.
+          </p>
+
+          <h2>2. Данные на устройстве</h2>
+          <ul>
+            <li>
+              <strong>Список семьи</strong> — имена, номера и связанные коды Safe Path хранятся
+              локально (UserDefaults и аналогичные механизмы iOS).
+            </li>
+            <li>
+              <strong>Безопасные зоны</strong> — координаты и параметры зон «дом» / «работа» для
+              локальных геозон.
+            </li>
+            <li>
+              <strong>Аватар профиля</strong> — JPEG-изображение, выбранное с камеры или из
+              галереи; хранится только на устройстве, в Firebase Storage не загружается.
+            </li>
+            <li>
+              <strong>Настройки</strong> — Face&nbsp;ID для вкладки «Настройки», язык, счётчик
+              запусков, состояние «На связи» и иные параметры.
+            </li>
+            <li>
+              <strong>Голосовая заметка SOS</strong> — короткое аудио во временном файле на
+              устройстве; может быть отправлено через системный «Поделиться» / Сообщения. В облако
+              Firebase аудио не загружается.
+            </li>
+          </ul>
+
+          <h2>3. Геолокация</h2>
+          <p>
+            Приложение может запрашивать доступ «При использовании» и «Всегда» для: отображения
+            позиции на карте; режима «На связи» (фоновая передача координат связанным пользователям);
+            безопасных зон «дом» / «работа» и локальных уведомлений о входе/выходе
+            (<code>CLCircularRegion</code>). Без разрешения «Всегда» iOS не может надёжно
+            отслеживать зоны и фоновую позицию. Данные о месте используются в рамках выбранных
+            разрешений и могут передаваться в Apple (карты, геокодирование) и в Firebase при
+            активных функциях.
+          </p>
+
+          <h2>4. Камера, фото и микрофон</h2>
+          <ul>
+            <li>
+              <strong>Камера и фотобиблиотека</strong> — для фото профиля и аватаров членов семьи;
+              изображения сохраняются локально.
+            </li>
+            <li>
+              <strong>Микрофон</strong> — только во время явного сценария SOS: короткая запись на
+              устройстве, затем системный Share. Фоновая запись звука не выполняется.
+            </li>
+          </ul>
+
+          <h2>5. Контакты и SMS</h2>
+          <p>
+            Для добавления членов семьи и отправки SMS с координатами Приложение может показать
+            системный выбор контакта. Номера используются на устройстве для выбранных действий;
+            адресная книга <strong>не загружается</strong> на сервер оператора целиком.
+          </p>
+
+          <h2>6. Firebase и сеть</h2>
+          <ul>
+            <li>
+              <strong>Firebase Anonymous Auth + Realtime Database</strong> — при «На связи» и SOS
+              могут передаваться координаты, статус SOS, FCM-токен и регистрации наблюдателей
+              (<code>sosWatchers</code>). Обработка осуществляется Google Firebase в соответствии с
+              <a href="https://firebase.google.com/support/privacy" rel="noopener">политикой Google / Firebase</a>.
+            </li>
+            <li>
+              <strong>Не используется</strong> — Firebase Storage, облачное медиа, фоновая запись
+              аудио.
+            </li>
+            <li>
+              <strong>Удалённые уведомления</strong> — регистрация FCM-токена. Полноценный
+              lock-screen push при убитом приложении может требовать Cloud Functions (опционально).
+              На плане Spark работают локальные уведомления при живом соединении с Realtime Database.
+            </li>
+          </ul>
+          <p>
+            Партнёрский / справочный раздел может открывать внешние URL; данные семьи туда
+            автоматически не передаются.
+          </p>
+
+          <h2>7. Биометрия</h2>
+          <p>
+            Опциональная защита вкладки «Настройки» через Face&nbsp;ID / Touch&nbsp;ID
+            (LocalAuthentication). Биометрические шаблоны обрабатываются только операционной
+            системой Apple; приложение не получает образ лица.
+          </p>
+
+          <h2>8. App Tracking Transparency и AppsFlyer</h2>
+          <p>
+            При первом запуске iOS может показать системный запрос App Tracking Transparency (ATT).
+            При согласии AppsFlyer может использовать рекламный идентификатор (IDFA), чтобы понять,
+            какая реклама привела к установке. Список семьи, геолокация и данные SOS в AppsFlyer не
+            передаются. Измерение начинается только после ответа на ATT. Изменить выбор можно в
+            Настройки iOS → Конфиденциальность и безопасность → Трекинг.
+          </p>
+
+          <h2>9. Фоновая работа</h2>
+          <ul>
+            <li>
+              <strong>Геолокация в фоне</strong> — только при включённом «На связи» и разрешении
+              «Всегда».
+            </li>
+            <li>
+              <strong>Удалённые уведомления</strong> — в пределах конфигурации сборки и возможностей
+              Firebase.
+            </li>
+          </ul>
+
+          <h2>10. Хранение и безопасность</h2>
+          <p>
+            Рекомендуем блокировку экрана устройства. Резервное копирование iPhone (iCloud или
+            компьютер) может включать данные приложения — см. документацию Apple.
+          </p>
+
+          <h2>11. Права субъектов данных</h2>
+          <p>
+            В зависимости от страны вы можете иметь право на доступ, исправление, удаление и
+            ограничение обработки. Удаление приложения удаляет локальные данные с устройства (за
+            исключением резервных копий). Для данных в Firebase направляйте запросы на контакт
+            выше.
+          </p>
+
+          <h2>12. Дети</h2>
+          <p>
+            Приложение не предназначено для целенаправленного сбора данных у детей младше возраста,
+            установленного законом. Если вы считаете, что мы получили такие данные, свяжитесь с
+            нами.
+          </p>
+
+          <h2>13. Изменения политики</h2>
+          <p>
+            Мы можем обновлять эту страницу при изменении функций или требований закона. Дата
+            «Последнее обновление» указывается вверху.
+          </p>
+        </div>
+
+        <div class="lang-be" hidden>
+          <h1>Палітыка канфідэнцыйнасці</h1>
+          <p class="meta">
+            Апошняе абнаўленне: 10 верасня 2026 г.<br />
+            Аператар: <strong>Safe Path</strong><br />
+            Кантакт па пытаннях даных:
+            <strong><a href="mailto:safepath.support@proton.me">safepath.support@proton.me</a></strong>
+          </p>
+          <p>
+            Гэта палітыка апісвае, як мабільная праграма Safe Path: Family Tracker («Праграма»)
+            можа апрацоўваць інфармацыю на вашай прыладзе і пры звароце да сеткі. Спіс сям'і, зоны
+            і аватар застаюцца на прыладзе. Каардынаты пры рэжыме «На сувязі», статус SOS і
+            службовыя токены перадаюцца ў Firebase.
+          </p>
+          <h2>1. Хто адказвае за апрацоўку</h2>
+          <p>
+            Аператар: <strong>Safe Path</strong>. Для запытаў па GDPR выкарыстоўвайце кантакт вышэй.
+          </p>
+          <h2>2. Даныя на прыладзе</h2>
+          <ul>
+            <li><strong>Спіс сям'і</strong> — імёны, нумары і коды Safe Path лакальна.</li>
+            <li><strong>Бяспечныя зоны</strong> — каардынаты зон «дом» / «праца».</li>
+            <li><strong>Аватар</strong> — толькі на прыладзе, не ў Firebase Storage.</li>
+            <li><strong>Галасавая нататка SOS</strong> — часовы файл; у воблака не загружаецца.</li>
+          </ul>
+          <h2>3. Геалакацыя</h2>
+          <p>
+            Для карты, рэжыму «На сувязі» і геазон «дом» / «праца». Доступ «Заўсёды» патрэбны для
+            фонавай пазіцыі і надзейнага маніторынгу зон.
+          </p>
+          <h2>4. Камера, фота і мікрафон</h2>
+          <ul>
+            <li><strong>Камера і фотатэка</strong> — для фота профілю; лакальна.</li>
+            <li><strong>Мікрафон</strong> — толькі пры яўным SOS; фонавы запіс не вядзецца.</li>
+          </ul>
+          <h2>5. Кантакты і SMS</h2>
+          <p>
+            Для дадання членаў сям'і і SMS з каардынатамі. Адрасная кніга не загружаецца на сервер
+            аператара цалкам.
+          </p>
+          <h2>6. Firebase і сетка</h2>
+          <p>
+            Anonymous Auth + Realtime Database для каардынат, SOS і FCM. Firebase Storage і
+            воблачнае медыя не выкарыстоўваюцца. Гл. палітыку Google / Firebase.
+          </p>
+          <h2>7. Біяметрыя</h2>
+          <p>Апцыянальная абарона «Налад» праз Face&nbsp;ID; шаблоны апрацоўвае толькі iOS.</p>
+          <h2>8. ATT і AppsFlyer</h2>
+          <p>
+            Запыт ATT пры першым запуску. Пры згодзе AppsFlyer можа выкарыстоўваць IDFA для
+            маркетынгавых вымярэнняў. Спіс сям'і, геалакацыя і SOS у AppsFlyer не перадаюцца.
+          </p>
+          <h2>9. Фонавая праца</h2>
+          <p>Геалакацыя ў фоне — толькі пры «На сувязі» і доступе «Заўсёды».</p>
+          <h2>10. Захоўванне і бяспека</h2>
+          <p>Рэкамендуем блакіроўку экрана. Рэзервовае капіраванне можа ўключаць даныя праграмы.</p>
+          <h2>11. Правы суб'ектаў даных</h2>
+          <p>Вы можаце мець права на доступ, выпраўленне і выдаленне. Пішыце на кантакт вышэй.</p>
+          <h2>12. Дзеці</h2>
+          <p>Праграма не прызначана для свавольнага збору даных у дзяцей маладзей законнага ўзросту.</p>
+          <h2>13. Змены палітыкі</h2>
+          <p>Мы можам абнаўляць гэту старонку; дата «Апошняе абнаўленне» ўверсе.</p>
+        </div>
+
+        <div class="lang-en" hidden>
+          <h1>Privacy Policy</h1>
+          <p class="meta">
+            Last updated: September 10, 2026<br />
+            Operator: <strong>Safe Path</strong><br />
+            Data inquiries:
+            <strong><a href="mailto:safepath.support@proton.me">safepath.support@proton.me</a></strong>
+          </p>
+
+          <p>
+            This policy describes how the Safe Path: Family Tracker mobile app (the “App”) may
+            process information on your device and over the network. Your family list, zones, and
+            avatar remain on the device. Coordinates while On Air is enabled, SOS status, and
+            service tokens are sent to Firebase. The exact feature set depends on your build and iOS
+            permissions.
+          </p>
+
+          <h2>1. Who is responsible</h2>
+          <p>
+            The data controller (or entity responsible for the App in your jurisdiction):
+            <strong>Safe Path</strong>. For GDPR or local-equivalent requests, use the contact
+            above.
+          </p>
+
+          <h2>2. On-device data</h2>
+          <ul>
+            <li>
+              <strong>Family list</strong> — names, numbers, and Safe Path codes stored locally
+              (UserDefaults and similar iOS mechanisms).
+            </li>
+            <li>
+              <strong>Safe zones</strong> — home / work coordinates and parameters for local
+              geofences.
+            </li>
+            <li>
+              <strong>Profile avatar</strong> — JPEG from Camera or Photos; stored only on device,
+              never uploaded to Firebase Storage.
+            </li>
+            <li>
+              <strong>Settings</strong> — Face&nbsp;ID for Settings, language, launch count, On Air
+              state, and related preferences.
+            </li>
+            <li>
+              <strong>SOS voice note</strong> — short audio in a temporary file; may be sent via the
+              system Share sheet / Messages. Audio is never uploaded to Firebase.
+            </li>
+          </ul>
+
+          <h2>3. Location</h2>
+          <p>
+            The App may request When-In-Use and Always access to: show your position on the map;
+            support On Air (background location sharing with linked users); home / work geofences
+            and local enter/exit alerts (<code>CLCircularRegion</code>). Without Always, iOS cannot
+            reliably monitor regions or background position. Location is used within your
+            permissions and may be sent to Apple (Maps, geocoding) and to Firebase when those
+            features run.
+          </p>
+
+          <h2>4. Camera, photos, and microphone</h2>
+          <ul>
+            <li>
+              <strong>Camera and photo library</strong> — for profile and family avatars; images
+              stay local.
+            </li>
+            <li>
+              <strong>Microphone</strong> — only during an explicit SOS flow: short on-device
+              recording, then system Share. No background audio recording.
+            </li>
+          </ul>
+
+          <h2>5. Contacts and SMS</h2>
+          <p>
+            To add family members and send SMS with coordinates, the App may present the system
+            contact picker. Numbers are used on device for the actions you choose; your address book
+            is <strong>not uploaded</strong> in full to the operator’s servers.
+          </p>
+
+          <h2>6. Firebase and network</h2>
+          <ul>
+            <li>
+              <strong>Firebase Anonymous Auth + Realtime Database</strong> — with On Air and SOS,
+              coordinates, SOS status, FCM tokens, and watcher registrations
+              (<code>sosWatchers</code>) may be transmitted. Processed by Google Firebase under the
+              <a href="https://firebase.google.com/support/privacy" rel="noopener">Google / Firebase privacy policy</a>.
+            </li>
+            <li>
+              <strong>Not used</strong> — Firebase Storage, cloud media, background audio capture.
+            </li>
+            <li>
+              <strong>Remote notifications</strong> — FCM token registration. Full lock-screen push
+              when the app is killed may require optional Cloud Functions. On Spark, local
+              notifications work while connected to Realtime Database.
+            </li>
+          </ul>
+          <p>
+            Partner / help content may open external URLs; family data is not sent there
+            automatically.
+          </p>
+
+          <h2>7. Biometrics</h2>
+          <p>
+            Optional Settings lock via Face&nbsp;ID / Touch&nbsp;ID (LocalAuthentication). Biometric
+            templates are handled only by Apple’s OS.
+          </p>
+
+          <h2>8. App Tracking Transparency and AppsFlyer</h2>
+          <p>
+            On the first launch, iOS may show the App Tracking Transparency (ATT) prompt. If you
+            consent, AppsFlyer may use the advertising identifier (IDFA) to measure which campaigns
+            led to installs. Your family list, location, and SOS data are not sent to AppsFlyer.
+            Measurement starts only after you answer ATT. Change your choice in iOS Settings →
+            Privacy &amp; Security → Tracking.
+          </p>
+
+          <h2>9. Background operation</h2>
+          <ul>
+            <li>
+              <strong>Background location</strong> — only while On Air is on and Always is granted.
+            </li>
+            <li>
+              <strong>Remote notifications</strong> — within your build configuration and Firebase
+              capabilities.
+            </li>
+          </ul>
+
+          <h2>10. Retention and security</h2>
+          <p>
+            Use a device passcode. iCloud or computer backups may include app data — see Apple’s
+            documentation.
+          </p>
+
+          <h2>11. Your rights</h2>
+          <p>
+            Depending on your country, you may have rights to access, correct, delete, or restrict
+            processing. Deleting the App removes local data (except backups). For Firebase data,
+            contact us at the address above.
+          </p>
+
+          <h2>12. Children</h2>
+          <p>
+            The App is not directed at knowingly collecting data from children below the legally
+            required age. Contact us if you believe we received such data.
+          </p>
+
+          <h2>13. Policy changes</h2>
+          <p>
+            We may update this page when features or legal requirements change. The “Last updated”
+            date appears at the top.
+          </p>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <nav
+          class="nav-inline"
+          data-aria-ru="Нижняя навигация"
+          data-aria-be="Ніжняя навігацыя"
+          data-aria-en="Footer navigation"
+          aria-label="Нижняя навигация"
+        >
+          <a href="index.html"
+            ><span class="lang-ru">Главная</span><span class="lang-be" hidden>Галоўная</span
+            ><span class="lang-en" hidden>Home</span></a
+          >
+          <a href="terms.html"
+            ><span class="lang-ru">Условия</span><span class="lang-be" hidden>Умовы</span
+            ><span class="lang-en" hidden>Terms</span></a
+          >
+        </nav>
+        <p><a href="mailto:safepath.support@proton.me">safepath.support@proton.me</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

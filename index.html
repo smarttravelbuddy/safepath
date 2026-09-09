@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html
+  lang="ru"
+  data-title-ru="Safe Path — карта семьи, зоны и SOS"
+  data-title-be="Safe Path — мапа сям'і, зоны і SOS"
+  data-title-en="Safe Path — family map, zones &amp; SOS"
+  data-desc-ru="Safe Path: Family Tracker — карта близких, режим «На связи», зоны дом/работа, кнопка SOS. Список семьи и аватар на устройстве; координаты при «На связи» — в Firebase."
+  data-desc-be="Safe Path: Family Tracker — мапа блізкіх, рэжым «На сувязі», зоны дом/праца, кнопка SOS. Спіс сям'і і аватар на прыладзе; каардынаты пры «На сувязі» — у Firebase."
+  data-desc-en="Safe Path: Family Tracker — live family map, On Air sharing, home/work geofences, SOS. Family list and avatar stay on device; On Air coordinates go to Firebase."
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Safe Path — карта семьи, зоны и SOS</title>
+    <meta
+      name="description"
+      content="Safe Path: Family Tracker — карта близких, режим «На связи», зоны дом/работа, кнопка SOS. Список семьи и аватар на устройстве; координаты при «На связи» — в Firebase."
+    />
+    <meta name="theme-color" content="#526b5c" />
+    <link rel="icon" type="image/png" href="assets/app-icon.png" />
+    <link rel="apple-touch-icon" href="assets/app-icon.png" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="lang.js" defer></script>
+  </head>
+  <body class="page-home">
+    <div class="home-bg" aria-hidden="true"></div>
+
+    <div class="home-shell">
+      <header class="home-nav">
+        <div class="home-logo">
+          <a href="index.html">
+            <img src="assets/app-icon.png" width="36" height="36" alt="" />
+            <span>Safe Path</span>
+          </a>
+        </div>
+        <div class="home-nav-end">
+          <nav
+            class="home-nav-links"
+            data-aria-ru="Юридическая информация"
+            data-aria-be="Юрыдычная інфармацыя"
+            data-aria-en="Legal information"
+            aria-label="Юридическая информация"
+          >
+            <a href="terms.html"
+              ><span class="lang-ru">Условия</span><span class="lang-be" hidden>Умовы</span
+              ><span class="lang-en" hidden>Terms</span></a
+            >
+            <a href="privacy.html"
+              ><span class="lang-ru">Конфиденциальность</span
+              ><span class="lang-be" hidden>Канфідэнцыяльнасць</span
+              ><span class="lang-en" hidden>Privacy</span></a
+            >
+          </nav>
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-sp-lang-btn="ru" aria-pressed="true">RU</button>
+            <button type="button" data-sp-lang-btn="be" aria-pressed="false">BY</button>
+            <button type="button" data-sp-lang-btn="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- RU -->
+        <div class="lang-ru">
+          <section class="home-hero">
+            <div class="home-hero-stage" aria-hidden="true">
+              <img src="assets/app-icon.png" alt="" />
+            </div>
+            <div class="home-hero-copy">
+              <p class="home-brand">Safe Path</p>
+              <h1>Карта семьи, зоны и SOS</h1>
+              <p class="home-hero-lead">
+                Режим «На связи», безопасные зоны дом и работа, кнопка SOS с голосовой заметкой
+                через «Поделиться». Список семьи и аватар остаются на iPhone.
+              </p>
+              <div class="home-cta">
+                <a class="btn-store" href="https://apps.apple.com/" rel="noopener">Скачать в App Store</a>
+                <a class="btn-text" href="privacy.html">Политика конфиденциальности</a>
+              </div>
+            </div>
+            <div class="home-hero-visual">
+              <div class="home-hero-glow" aria-hidden="true"></div>
+              <img
+                class="home-app-icon"
+                src="assets/app-icon.png"
+                width="512"
+                height="512"
+                alt="Иконка приложения Safe Path"
+              />
+            </div>
+          </section>
+
+          <section class="home-section">
+            <div class="home-section-head">
+              <p class="home-section-kicker">Возможности</p>
+              <h2 class="home-section-title">Спокойный трекер для близких</h2>
+              <p class="home-section-lead">
+                Без лишней суеты: карта семьи, зоны дом и работа, SOS и защита настроек — в одном
+                приложении на iPhone.
+              </p>
+            </div>
+            <ul class="home-features">
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z" /><circle
+                      cx="12"
+                      cy="10"
+                      r="3"
+                  /></svg>
+                </div>
+                <h3>Карта и «На связи»</h3>
+                <p>
+                  Видите себя и близких на карте. Режим «На связи» передаёт позицию, пока включён
+                  доступ «Всегда». До пяти человек одновременно.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><path
+                      d="M12 3v2M12 19v2M3 12h2M19 12h2"
+                  /></svg>
+                </div>
+                <h3>Зоны дом и работа</h3>
+                <p>
+                  Отметьте безопасные зоны — локальные уведомления при входе и выходе. Для надёжной
+                  работы нужен доступ «Всегда».
+                </p>
+              </li>
+              <li class="home-feature home-feature-sos">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                  /></svg>
+                </div>
+                <h3>Кнопка SOS</h3>
+                <p>
+                  Один жест записывает координаты в облако и предлагает поделиться ими и короткой
+                  голосовой заметкой — аудио в Firebase не загружается.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path
+                      d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+                    /><circle cx="9" cy="7" r="4" /><path
+                      d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+                  /></svg>
+                </div>
+                <h3>Семья и SMS</h3>
+                <p>
+                  Добавляйте близких через контакты, обменивайтесь кодом Safe Path, отправляйте
+                  координаты SMS. Список семьи хранится локально.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><rect x="3" y="11" width="18" height="11" rx="2" /><path
+                      d="M7 11V7a5 5 0 0110 0v4"
+                  /></svg>
+                </div>
+                <h3>Профиль и Face&nbsp;ID</h3>
+                <p>
+                  Фото профиля — только на устройстве. Опциональная защита вкладки «Настройки»
+                  через Face&nbsp;ID или код устройства.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><circle cx="12" cy="12" r="10" /><path
+                      d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
+                  /></svg>
+                </div>
+                <h3>Три языка</h3>
+                <p>
+                  Русский, английский и белорусский интерфейс — без отдельного облачного аккаунта
+                  для списка семьи.
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="home-data">
+            <h2>Работа с данными</h2>
+            <p>
+              Список семьи, зоны, аватар и настройки Face&nbsp;ID хранятся на устройстве. При
+              включённом «На связи» координаты, статус SOS, FCM-токен и регистрации наблюдателей
+              передаются в Firebase (анонимный вход + Realtime Database). Фото профиля и голосовые
+              заметки SOS в облако не загружаются. App Tracking Transparency запрашивается при
+              первом запуске; при согласии AppsFlyer измеряет рекламные кампании — данные семьи,
+              геолокация и SOS не передаются в AppsFlyer. Языки: русский, английский,
+              белорусский.
+            </p>
+          </section>
+
+          <p class="home-disclaimer">
+            Safe Path не заменяет службы спасения и экстренные службы. Координаты и SOS зависят от
+            GPS, сети и настроек устройства.
+          </p>
+        </div>
+
+        <!-- BE -->
+        <div class="lang-be" hidden>
+          <section class="home-hero">
+            <div class="home-hero-stage" aria-hidden="true">
+              <img src="assets/app-icon.png" alt="" />
+            </div>
+            <div class="home-hero-copy">
+              <p class="home-brand">Safe Path</p>
+              <h1>Мапа сям'і, зоны і SOS</h1>
+              <p class="home-hero-lead">
+                Рэжым «На сувязі», бяспечныя зоны дом і праца, кнопка SOS з галасавой нататкай
+                праз «Падзяліцца». Спіс сям'і і аватар застаюцца на iPhone.
+              </p>
+              <div class="home-cta">
+                <a class="btn-store" href="https://apps.apple.com/" rel="noopener">Спампаваць у App Store</a>
+                <a class="btn-text" href="privacy.html">Палітыка канфідэнцыйнасці</a>
+              </div>
+            </div>
+            <div class="home-hero-visual">
+              <div class="home-hero-glow" aria-hidden="true"></div>
+              <img
+                class="home-app-icon"
+                src="assets/app-icon.png"
+                width="512"
+                height="512"
+                alt="Значок праграмы Safe Path"
+              />
+            </div>
+          </section>
+
+          <section class="home-section">
+            <div class="home-section-head">
+              <p class="home-section-kicker">Магчымасці</p>
+              <h2 class="home-section-title">Спакойны трэкер для блізкіх</h2>
+              <p class="home-section-lead">
+                Без лішняй мітусні: мапа сям'і, зоны дом і праца, SOS і абарона наладаў — у адной
+                праграме на iPhone.
+              </p>
+            </div>
+            <ul class="home-features">
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z" /><circle
+                      cx="12"
+                      cy="10"
+                      r="3"
+                  /></svg>
+                </div>
+                <h3>Мапа і «На сувязі»</h3>
+                <p>
+                  Бачыце сябе і блізкіх на мапе. Рэжым «На сувязі» перадае пазіцыю пры доступе
+                  «Заўсёды». Да пяці чалавек адначасова.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><path
+                      d="M12 3v2M12 19v2M3 12h2M19 12h2"
+                  /></svg>
+                </div>
+                <h3>Зоны дом і праца</h3>
+                <p>
+                  Адзначце бяспечныя зоны — лакальныя апавяшчэнні пры ўваходзе і выхадзе. Для
+                  надзейнай працы патрэбны доступ «Заўсёды».
+                </p>
+              </li>
+              <li class="home-feature home-feature-sos">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                  /></svg>
+                </div>
+                <h3>Кнопка SOS</h3>
+                <p>
+                  Адзін жэст запісвае каардынаты ў воблака і прапануе падзяліцца імі і кароткай
+                  галасавой нататкай — аўдыё ў Firebase не загружаецца.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path
+                      d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+                    /><circle cx="9" cy="7" r="4" /><path
+                      d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+                  /></svg>
+                </div>
+                <h3>Сям'я і SMS</h3>
+                <p>
+                  Дадавайце блізкіх праз кантакты, абменьвайцеся кодам Safe Path, дасылайце
+                  каардынаты SMS. Спіс сям'і захоўваецца лакальна.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><rect x="3" y="11" width="18" height="11" rx="2" /><path
+                      d="M7 11V7a5 5 0 0110 0v4"
+                  /></svg>
+                </div>
+                <h3>Профіль і Face&nbsp;ID</h3>
+                <p>
+                  Фота профілю — толькі на прыладзе. Апцыянальная абарона «Налад» праз
+                  Face&nbsp;ID або код прылады.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><circle cx="12" cy="12" r="10" /><path
+                      d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
+                  /></svg>
+                </div>
+                <h3>Тры мовы</h3>
+                <p>
+                  Беларуская, руская і англійская — без асобнага воблачнага акаўнта для спісу
+                  сям'і.
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="home-data">
+            <h2>Праца з данымі</h2>
+            <p>
+              Спіс сям'і, зоны, аватар і налады Face&nbsp;ID захоўваюцца на прыладзе. Пры ўключаным
+              «На сувязі» каардынаты, статус SOS і FCM-токены перадаюцца ў Firebase. Фота і
+              галасавыя нататкі SOS у воблака не загружаюцца. ATT запытваецца пры першым запуску;
+              пры згодзе AppsFlyer вымярвае рэкламныя кампаніі — даныя сям'і, геалакацыя і SOS не
+              перадаюцца. Мовы: беларуская, руская, англійская.
+            </p>
+          </section>
+
+          <p class="home-disclaimer">
+            Safe Path не замяняе службы ратавання. Каардынаты і SOS залежаць ад GPS, сеткі і
+            наладаў прылады.
+          </p>
+        </div>
+
+        <!-- EN -->
+        <div class="lang-en" hidden>
+          <section class="home-hero">
+            <div class="home-hero-stage" aria-hidden="true">
+              <img src="assets/app-icon.png" alt="" />
+            </div>
+            <div class="home-hero-copy">
+              <p class="home-brand">Safe Path</p>
+              <h1>Family map, zones &amp; SOS</h1>
+              <p class="home-hero-lead">
+                On Air sharing, home and work geofences, an SOS button with a short voice note via
+                Share. Your family list and avatar stay on the iPhone.
+              </p>
+              <div class="home-cta">
+                <a class="btn-store" href="https://apps.apple.com/" rel="noopener">Get it on the App Store</a>
+                <a class="btn-text" href="privacy.html">Privacy Policy</a>
+              </div>
+            </div>
+            <div class="home-hero-visual">
+              <div class="home-hero-glow" aria-hidden="true"></div>
+              <img
+                class="home-app-icon"
+                src="assets/app-icon.png"
+                width="512"
+                height="512"
+                alt="Safe Path app icon"
+              />
+            </div>
+          </section>
+
+          <section class="home-section">
+            <div class="home-section-head">
+              <p class="home-section-kicker">Capabilities</p>
+              <h2 class="home-section-title">A calm tracker for people you care about</h2>
+              <p class="home-section-lead">
+                No clutter: family map, home and work zones, SOS, and a Settings lock — in one app
+                on iPhone.
+              </p>
+            </div>
+            <ul class="home-features">
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z" /><circle
+                      cx="12"
+                      cy="10"
+                      r="3"
+                  /></svg>
+                </div>
+                <h3>Map &amp; On Air</h3>
+                <p>
+                  See yourself and family on the map. On Air shares your position while Always
+                  location is granted. Up to five people at once.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><path
+                      d="M12 3v2M12 19v2M3 12h2M19 12h2"
+                  /></svg>
+                </div>
+                <h3>Home &amp; work zones</h3>
+                <p>
+                  Mark safe zones for local enter/exit alerts. Always location access is required
+                  for reliable monitoring.
+                </p>
+              </li>
+              <li class="home-feature home-feature-sos">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                  /></svg>
+                </div>
+                <h3>SOS button</h3>
+                <p>
+                  One gesture writes coordinates to the cloud and offers Share with a short voice
+                  note — audio is never uploaded to Firebase.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><path
+                      d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+                    /><circle cx="9" cy="7" r="4" /><path
+                      d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+                  /></svg>
+                </div>
+                <h3>Family &amp; SMS</h3>
+                <p>
+                  Add people via Contacts, exchange Safe Path codes, send coordinates by SMS. The
+                  family list stays local.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><rect x="3" y="11" width="18" height="11" rx="2" /><path
+                      d="M7 11V7a5 5 0 0110 0v4"
+                  /></svg>
+                </div>
+                <h3>Profile &amp; Face&nbsp;ID</h3>
+                <p>
+                  Profile photos stay on device. Optionally lock Settings with Face&nbsp;ID or the
+                  device passcode.
+                </p>
+              </li>
+              <li class="home-feature">
+                <div class="home-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"
+                    ><circle cx="12" cy="12" r="10" /><path
+                      d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
+                  /></svg>
+                </div>
+                <h3>Three languages</h3>
+                <p>
+                  Russian, English, and Belarusian UI — no separate cloud account for your family
+                  list.
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="home-data">
+            <h2>Data practice</h2>
+            <p>
+              Family list, zones, avatar, and Face&nbsp;ID settings stay on device. With On Air on,
+              coordinates, SOS status, FCM tokens, and watcher registrations go to Firebase
+              (Anonymous Auth + Realtime Database). Profile photos and SOS voice notes are not
+              uploaded. App Tracking Transparency is requested on the first launch; if you consent,
+              AppsFlyer measures install campaigns — family list, location, and SOS data are not
+              sent to AppsFlyer. Languages: English, Russian, Belarusian.
+            </p>
+          </section>
+
+          <p class="home-disclaimer">
+            Safe Path does not replace emergency services. Coordinates and SOS depend on GPS,
+            network, and device settings.
+          </p>
+        </div>
+      </main>
+
+      <footer class="home-footer">
+        <p class="lang-ru">
+          © Safe Path · <a href="mailto:safepath.support@proton.me">safepath.support@proton.me</a>
+        </p>
+        <p class="lang-be" hidden>
+          © Safe Path · <a href="mailto:safepath.support@proton.me">safepath.support@proton.me</a>
+        </p>
+        <p class="lang-en" hidden>
+          © Safe Path · <a href="mailto:safepath.support@proton.me">safepath.support@proton.me</a>
+        </p>
+        <nav
+          data-aria-ru="Нижняя навигация"
+          data-aria-be="Ніжняя навігацыя"
+          data-aria-en="Footer navigation"
+          aria-label="Нижняя навигация"
+        >
+          <a href="terms.html"
+            ><span class="lang-ru">Условия</span><span class="lang-be" hidden>Умовы</span
+            ><span class="lang-en" hidden>Terms</span></a
+          >
+          <a href="privacy.html"
+            ><span class="lang-ru">Конфиденциальность</span
+            ><span class="lang-be" hidden>Канфідэнцыяльнасць</span
+            ><span class="lang-en" hidden>Privacy</span></a
+          >
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
