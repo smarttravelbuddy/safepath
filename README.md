@@ -1,6 +1,6 @@
-# safepath
+# redpoint
 
-Marketing site and legal pages for **Safe Path: Family Tracker**.
+Marketing site and legal pages for **Red Point**.
 
 - Privacy: `/privacy`
 - Terms: `/terms`

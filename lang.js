@@ -1,5 +1,5 @@
 (function () {
-  var KEY = 'safepath_lang';
+  var KEY = 'redpoint_lang';
   var LANGS = ['ru', 'be', 'en'];
 
   function normalize(stored) {
